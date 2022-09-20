@@ -1,5 +1,4 @@
-const mongoose = require('mongoose')
-const User = require('../schema/user')
+
 const bcrypt = require('bcrypt')
 const getController=require('./get')
 const postController=require('./post')

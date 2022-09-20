@@ -1,3 +1,5 @@
+const User=require("../schema/user")
+
 const post={
     login: async (req, res, next) => {
         try {

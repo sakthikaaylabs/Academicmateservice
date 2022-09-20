@@ -1,3 +1,5 @@
+const User=require("../schema/user")
+
 const put={
     forgot: async (req, res, next) => {
         try {
