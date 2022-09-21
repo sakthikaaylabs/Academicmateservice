@@ -7,6 +7,7 @@ router.get("/",(req,res)=>{
     res.send("This is login Page");
 })
 
+//REGISTER
 router.post("/register", async(req, res) =>{
     try {
         ////genrate New Passweord
@@ -48,21 +49,5 @@ router.post("/login", async(req, res) => {
     }  
     
 });
-
-//gwt test
-// router.get("/registerget", async (req,res) => {
-//     const user = await new User({
-//         username: "sakthi123",
-//         email:"sakthi@gmail.com",
-//         password: "12345678"
-//     })
-//     try{
-//         await user.save();
-//         res.send("This is data received");
-//     } catch (err) {
-//         console.log(err);
-//     }
-    
-// })
 
 module.exports = router;

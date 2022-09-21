@@ -6,6 +6,8 @@ const helmet = require("helmet");
 const morgan = require("morgan");
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
+const postRoute = require("./routes/post");
+const academyRouter = require("./routes/academy")
 const URL = "mongodb+srv://academymate:sakthi*123@cluster0.4ob4gls.mongodb.net/social?retryWrites=true&w=majority"
 
 // ----------------------------------------------------------------
@@ -36,6 +38,10 @@ app.get("/authenticate", (req,res) =>{
 app.use("/api/user", userRoute);
 
 app.use("/api/auth", authRoute);
+
+app.use("/api/posts",postRoute);
+
+app.use("/api/academy", academyRouter)
 
 app.listen(7000,()=>{
     console.log("listening on port 7000... is running Now");
