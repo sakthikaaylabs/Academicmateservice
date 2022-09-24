@@ -20,6 +20,13 @@ const get={
             return res.status(404).json({ error, success: false })
         }
     },
+    event: async (req, res, next) => {
+        try {
+            return res.status(200).json({ data: "event", success: true })
+        } catch (error) {
+            return res.status(404).json({ error, success: false })
+        }
+    },
 }
 
 module.exports=get;

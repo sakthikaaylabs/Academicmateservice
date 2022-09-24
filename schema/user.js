@@ -7,9 +7,15 @@ const Schema = mongoose.Schema({
    email:{
     type:String,
     unique:true,
-   }
+   },
+   academic:{
+      type:Array
+   },
+   groups:[ObjectId],
+   events:Array,
+   chellanges:Array
   
 })
-const User = mongoose.model('user', Schema)
+const User = mongoose.model('users', Schema)
 
 module.exports = User
